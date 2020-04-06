@@ -1,4 +1,62 @@
 {
-    "computers": [],
-    "employees": []
+    "computers": [{
+            "id": 1,
+            "compModel": "Lenovo ThinkBook",
+            "compManYear": 2019
+        },
+        {
+            "id": 2,
+            "compModel": "Dell OptiPlex 960",
+            "compManYear": 2009
+        },
+        {
+            "id": 3,
+            "compModel": "Apple II",
+            "compManYear": 1978
+        },
+        {
+            "id": 4,
+            "compModel": "Dell XPS 15 9575",
+            "compManYear": 2018
+        },
+        {
+            "id": 5,
+            "compModel": "MacBook Pro",
+            "compManYear": 2020
+        },
+        {
+            "id": 6,
+            "compModel": "Casio SL-300SV",
+            "compManYear": 2019
+        }
+    ],
+    "employees": [{
+            "id": 1,
+            "firstName": "Heidi",
+            "lastName": "Sprouse",
+            "age": 28,
+            "computerId": 1
+        },
+        {
+            "id": 2,
+            "firstName": "Snark",
+            "lastName": "Gooberton",
+            "age": 72,
+            "computerId": 3
+        },
+        {
+            "id": 3,
+            "firstName": "Doug",
+            "lastName": "Warrington",
+            "age": 2,
+            "computerId": 6
+        },
+        {
+            "id": 4,
+            "firstName": "Tamara",
+            "lastName": "Tribble",
+            "age": 38,
+            "computerId": 5
+        }
+    ]
 }
