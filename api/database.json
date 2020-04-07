@@ -18,6 +18,16 @@
             "id": 4,
             "compModel": "MacBook Pro",
             "compManYear": 2020
+        },
+        {
+            "id": 5,
+            "compModel": "PalmPilot",
+            "compManYear": 1997
+        },
+        {
+            "id": 6,
+            "compModel": "Tricorder",
+            "compManYear": 2371
         }
     ],
     "employees": [{
@@ -25,6 +35,7 @@
             "firstName": "Heidi",
             "lastName": "Sprouse",
             "age": 28,
+            "departmentId": 1,
             "computerId": 1
         },
         {
@@ -32,6 +43,7 @@
             "firstName": "Snark",
             "lastName": "Gooberton",
             "age": 72,
+            "departmentId": 3,
             "computerId": 2
         },
         {
@@ -39,6 +51,7 @@
             "firstName": "Doug",
             "lastName": "Warrington",
             "age": 2,
+            "departmentId": 2,
             "computerId": 3
         },
         {
@@ -46,7 +59,42 @@
             "firstName": "Tamara",
             "lastName": "Tribble",
             "age": 38,
+            "departmentId": 1,
             "computerId": 4
+        },
+        {
+            "id": 5,
+            "firstName": "Kismet",
+            "lastName": "Warrington",
+            "age": 2,
+            "departmentId": 4,
+            "computerId": 5
+        },
+        {
+            "id": 6,
+            "firstName": "Tato",
+            "lastName": "Warrington",
+            "age": 1,
+            "departmentId": 1,
+            "computerId": 6
         }
+    ],
+    "departments": [{
+            "id": 1,
+            "name": "consultant"
+        },
+        {
+            "id": 2,
+            "name": "accounting"
+        },
+        {
+            "id": 3,
+            "name": "quality assurance"
+        },
+        {
+            "id": 4,
+            "name": "mascot"
+        }
+
     ]
 }
