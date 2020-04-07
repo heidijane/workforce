@@ -2,6 +2,7 @@ import { useEmployees } from "./employeeProvider.js";
 import { useComputers } from "../computers/computerProvider.js";
 import { Employee } from "./Employee.js";
 import { useDepartments } from "../departments/departmentProvider.js";
+import { useLocations } from "../computers/locations/locationProvider.js";
 
 const contentTarget = document.querySelector("#container")
 
@@ -21,6 +22,9 @@ const render = () => {
     //get the department data
     const departments = useDepartments()
 
+    //get the location data
+    const locations = useLocations()
+
     //iterate through the employees
     contentTarget.innerHTML = employees.map(employee => {
         //match the employee with their computer
@@ -29,6 +33,9 @@ const render = () => {
         //match the employee with their department
         const foundDepartment = departments.find(department => department.id === employee.departmentId)
 
-        return Employee(employee, foundComputer, foundDepartment)
+        //match the employee with their location
+        const foundLocation = locations.find(location => location.id === employee.locationId)
+
+        return Employee(employee, foundComputer, foundDepartment, foundLocation)
     }).join('')
 }
