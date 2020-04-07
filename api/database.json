@@ -60,7 +60,7 @@
             "lastName": "Tribble",
             "age": 38,
             "departmentId": 1,
-            "computerId": 4
+            "computerId": 6
         },
         {
             "id": 5,
@@ -76,12 +76,12 @@
             "lastName": "Warrington",
             "age": 1,
             "departmentId": 1,
-            "computerId": 6
+            "computerId": 4
         }
     ],
     "departments": [{
             "id": 1,
-            "name": "consultant"
+            "name": "consulting"
         },
         {
             "id": 2,
