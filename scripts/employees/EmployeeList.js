@@ -3,6 +3,8 @@ import { useComputers } from "../computers/computerProvider.js";
 import { Employee } from "./Employee.js";
 import { useDepartments } from "../departments/departmentProvider.js";
 import { useLocations } from "../computers/locations/locationProvider.js";
+import { useCustomers } from "../customers/customerProvider.js";
+import { useEmployeeCustomers } from "./employeeCustomerProvider.js";
 
 const contentTarget = document.querySelector("#container")
 
@@ -25,6 +27,12 @@ const render = () => {
     //get the location data
     const locations = useLocations()
 
+    //get the customer data
+    const customers = useCustomers()
+
+    //get the relationships between the customers and the employees
+    const employeeCustomers = useEmployeeCustomers()
+
     //iterate through the employees
     contentTarget.innerHTML = employees.map(employee => {
         //match the employee with their computer
@@ -36,6 +44,14 @@ const render = () => {
         //match the employee with their location
         const foundLocation = locations.find(location => location.id === employee.locationId)
 
-        return Employee(employee, foundComputer, foundDepartment, foundLocation)
+        //find the employee/customer relationships
+        const relationships = employeeCustomers.filter(relationship => relationship.employeeId === employee.id)
+
+        //convert the relationship info into customer data
+        const assignedCustomers = relationships.map(relationship => {
+            return customers.find(customer => customer.id === relationship.customerId)
+        })
+
+        return Employee(employee, foundComputer, foundDepartment, foundLocation, assignedCustomers)
     }).join('')
 }
